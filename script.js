@@ -19,7 +19,7 @@ function startClock() {
     // Set a timeout to align the clock updates with the start of a new second
     setTimeout(function() {
         updateClock();
-        setInterval(updateClock, 100); // Then continue to update every second
+        setInterval(updateClock, 25); // Then continue to update every second
     }, msUntilNextSecond);
 }
 
