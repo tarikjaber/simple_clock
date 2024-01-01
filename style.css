@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'Roboto Mono';
+    src: url('fonts/roboto-mono-latin-500-normal.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+}
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #191919;
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 3em;
+}
+
+#clock {
+    text-align: center;
+}
