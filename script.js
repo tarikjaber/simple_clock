@@ -11,5 +11,16 @@ function updateClock() {
     document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
 }
 
-setInterval(updateClock, 1000);
-updateClock(); // Initial call to display clock immediately
+function startClock() {
+    updateClock(); // Update clock immediately
+    const now = new Date();
+    const msUntilNextSecond = 1000 - now.getMilliseconds();
+
+    // Set a timeout to align the clock updates with the start of a new second
+    setTimeout(function() {
+        updateClock();
+        setInterval(updateClock, 100); // Then continue to update every second
+    }, msUntilNextSecond);
+}
+
+startClock(); // Call startClock instead of updateClock directly
